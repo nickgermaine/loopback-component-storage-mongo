@@ -1,5 +1,5 @@
 {
-  "name": "loopback-component-storage-mongo2",
+  "name": "loopback-component-storage-mongo",
   "version": "1.5.1",
   "description": "",
   "main": "lib/index.js",
