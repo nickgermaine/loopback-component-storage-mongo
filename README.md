@@ -12,7 +12,7 @@ LoopBack storage mongo component provides Node.js and REST APIs to manage binary
 Install the storage component as usual for a Node package:
 
 ```bash
-  npm install --save loopback-component-storage-mongo2
+  npm install --save git+https://git@github.com/nickgermaine/loopback-component-storage-mongo.git
 ```
 
 ## Using it
