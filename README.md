@@ -1,4 +1,4 @@
-# loopback-component-storage-mongo
+# loopback-component-storage-mongo2
 [![Build Status](https://travis-ci.org/jdrouet/loopback-component-storage-mongo.svg)](https://travis-ci.org/jdrouet/loopback-component-storage-mongo)
 [![codecov.io](https://codecov.io/github/jdrouet/loopback-component-storage-mongo/coverage.svg?branch=master)](https://codecov.io/github/jdrouet/loopback-component-storage-mongo?branch=master)
 [![Dependency Status](https://david-dm.org/jdrouet/loopback-component-storage-mongo.svg)](https://david-dm.org/jdrouet/loopback-component-storage-mongo)
@@ -12,7 +12,7 @@ LoopBack storage mongo component provides Node.js and REST APIs to manage binary
 Install the storage component as usual for a Node package:
 
 ```bash
-  npm install --save loopback-component-storage-mongo
+  npm install --save loopback-component-storage-mongo2
 ```
 
 ## Using it
