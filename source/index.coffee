@@ -176,7 +176,7 @@ class MongoStorage
       return callback err if err
       self.__download file, res, callback
 
-  __view: (file, res, callback = (-> return)) ->
+  __viewFile: (file, res, callback = (-> return)) ->
     gfs = Grid @db, mongodb
     read = gfs.createReadStream
       _id: file._id
@@ -184,11 +184,11 @@ class MongoStorage
     res.set 'Content-Length', file.length
     read.pipe res
 
-  view: (container, filename, res, callback = (-> return)) ->
+  viewFile: (container, filename, res, callback = (-> return)) ->
     self = @
     @getFile container, filename, (err, file) ->
       return callback err if err
-      self.__view file, res, callback
+      self.__viewFile file, res, callback
 
 
 MongoStorage.modelName = 'storage'
@@ -248,13 +248,13 @@ MongoStorage.prototype.download.accepts = [
 ]
 MongoStorage.prototype.download.http = {verb: 'get', path: '/:container/download/:file'}
 
-MongoStorage.prototype.view.shared = true
-MongoStorage.prototype.view.accepts = [
+MongoStorage.prototype.viewFile.shared = true
+MongoStorage.prototype.viewFile.accepts = [
   {arg: 'container', type: 'string'}
   {arg: 'file', type: 'string'}
   {arg: 'res', type: 'object', http: {source: 'res'}}
 ]
-MongoStorage.prototype.view.http = {verb: 'get', path: '/:container/view/:file'}
+MongoStorage.prototype.viewFile.http = {verb: 'get', path: '/:container/view/:file'}
 
 exports.initialize = (dataSource, callback) ->
   settings = dataSource.settings or {}
